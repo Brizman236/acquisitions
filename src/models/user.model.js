@@ -1,5 +1,6 @@
 import { pgTable, serial, varchar, timestamp } from 'drizzle-orm/pg-core';
 
+// Drizzle schema for the user records persisted by the authentication service.
 export const users = pgTable('users', {
   id: serial('id').primaryKey(),
   name: varchar('name', { length: 255 }).notNull(),
